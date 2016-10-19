@@ -15,7 +15,7 @@
 #import "DataViewController.h"
 #import "StillViewController.h"
 
-@interface StillViewController () {
+@interface StillViewController () <UITextFieldDelegate> {
     
     PFObject *mPFObject;
     UIButton *mEditButton;
@@ -23,6 +23,7 @@
     float mActivityCenterY;
     CMMaskView *mCMMaskView;
     CMHistogramView *mHistogramView;
+    UITextField *mCaptionTextField;
     
 }
 
@@ -88,11 +89,25 @@
     mCMMaskView.hidden= YES;
     [view addSubview:mCMMaskView];
     
-    float y= 20 + view.frame.size.height+20;
+    float y= 5 + view.frame.size.height+20;
+    float capHeight = 44;
+    
+    // caption text field
+    mCaptionTextField= [[UITextField alloc] initWithFrame:CGRectMake( 10, y, width - 20, capHeight )];
+    mCaptionTextField.borderStyle = UITextBorderStyleNone;
+    mCaptionTextField.font= [UIFont clientBodyFont];
+    mCaptionTextField.textColor= [UIColor lightGrayColor];
+    mCaptionTextField.attributedPlaceholder= [[NSAttributedString alloc] initWithString:@"Enter caption" attributes:@{NSForegroundColorAttributeName:UIColor.lightGrayColor}];
+    mCaptionTextField.returnKeyType = UIReturnKeyDone;
+    mCaptionTextField.delegate = self;
+    [self.view addSubview:mCaptionTextField];
+    
+    y += 5 + capHeight;
     float height = self.view.frame.size.height-20-44-20 - y;
     
     mHistogramView= [[CMHistogramView alloc] initWithFrame:CGRectMake( 0, y, self.view.frame.size.width, height ) image:self.mImage];
     [self.view addSubview:mHistogramView];
+    
     
     float x= 0;
     width= self.view.frame.size.width/3;
@@ -128,6 +143,15 @@
     }
 }
 
+//------------------------------------------------------------------------------
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+//------------------------------------------------------------------------------
+{
+    [textField resignFirstResponder];
+        
+    return YES;
+}
+    
 //------------------------------------------------------------------------------
 - (void)retakeButtonPressed
 //------------------------------------------------------------------------------
@@ -188,7 +212,13 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    [ParseManager uploadImage:image histogram:histogram block:^( PFObject *pfObject ) {
+    NSString *caption;
+    
+    if ([mCaptionTextField.text length]) {
+        caption = mCaptionTextField.text;
+    }
+    
+    [ParseManager uploadImage:image histogram:histogram caption:caption block:^( PFObject *pfObject ) {
         
         [activityView removeFromSuperview];
         

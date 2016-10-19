@@ -58,6 +58,7 @@
 		5ECAA5B51BBAE8720049C633 /* chevronLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECAA5B11BBAE8720049C633 /* chevronLeft.png */; };
 		5ECAA5B61BBAE8720049C633 /* produce-pie.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECAA5B21BBAE8720049C633 /* produce-pie.png */; };
 		5ECAA5B71BBAE8720049C633 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ECAA5B31BBAE8720049C633 /* user.png */; };
+		B68CD6501DADC0E400A87C6F /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B68CD64F1DADC0E400A87C6F /* UIImage+Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,8 @@
 		5ECAA5B21BBAE8720049C633 /* produce-pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "produce-pie.png"; path = "EveryBite/Resources/produce-pie.png"; sourceTree = "<group>"; };
 		5ECAA5B31BBAE8720049C633 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = EveryBite/Resources/user.png; sourceTree = "<group>"; };
 		B68C345C1DA5D4C8002AF64B /* EveryBite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EveryBite.entitlements; sourceTree = "<group>"; };
+		B68CD64E1DADC0E400A87C6F /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
+		B68CD64F1DADC0E400A87C6F /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +289,8 @@
 				5ECAA5801BBAE2F40049C633 /* UIFont+ClientFont.m */,
 				5ECAA5811BBAE2F40049C633 /* UIImage+ImageEffects.h */,
 				5ECAA5861BBAE3610049C633 /* UIImage+ImageEffects.m */,
+				B68CD64E1DADC0E400A87C6F /* UIImage+Util.h */,
+				B68CD64F1DADC0E400A87C6F /* UIImage+Util.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				5ECAA56F1BBAE2D90049C633 /* ActivityView.m in Sources */,
 				5ECAA5701BBAE2D90049C633 /* AVCamPreviewView.m in Sources */,
 				5ECAA5871BBAE3610049C633 /* UIImage+ImageEffects.m in Sources */,
+				B68CD6501DADC0E400A87C6F /* UIImage+Util.m in Sources */,
 				5ECAA5571BBAE2B40049C633 /* RootViewController.m in Sources */,
 				5ECAA5831BBAE2F40049C633 /* ParseManager.m in Sources */,
 				5ECAA5591BBAE2B40049C633 /* StillViewController.m in Sources */,

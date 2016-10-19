@@ -14,6 +14,7 @@
 #import "ColorBarView.h"
 #import "UIFont+ClientFont.h"
 #import "UIColor+ClientColor.h"
+#import "UIImage+Util.h"
 
 @interface DayTableView() <UITableViewDataSource,UITableViewDelegate> {
     
@@ -156,10 +157,11 @@
         view.backgroundColor= [UIColor clearColor];
         [cell.contentView addSubview:view];
         
-        UIImage *image= [ImageCache imageNamed:pfObject.objectId];
-        
         UIImageView *imageView= [[UIImageView alloc] initWithFrame:CGRectMake( 0, 0, 80, 80 )];
-        [imageView setImage:image];
+        UIImage *img = [ImageCache imageNamed:pfObject.objectId];
+        imageView.image = [UIImage drawText:pfObject[kCaption]
+                                    inImage:img
+                                    atPoint:CGPointMake(5, img.size.height - 36)];
         imageView.layer.borderColor= [[UIColor blackColor] CGColor];
         imageView.layer.borderWidth= 1;
         imageView.userInteractionEnabled= YES;

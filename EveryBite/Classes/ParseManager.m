@@ -71,7 +71,7 @@ static ParseManager *instance;
 }
 
 //------------------------------------------------------------------------------
-+ (void)uploadImage:(UIImage *)image histogram:(NSMutableArray *)histogram block:(void (^)( PFObject *pfObject ))block
++ (void)uploadImage:(UIImage *)image histogram:(NSMutableArray *)histogram caption:(NSString *)caption block:(void (^)( PFObject *pfObject ))block
 //------------------------------------------------------------------------------
 {
     dispatch_async( dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0 ), ^{
@@ -84,6 +84,9 @@ static ParseManager *instance;
         
         pfObject[kUser]= [PFUser currentUser];
         pfObject[kHistogram]= histogram;
+        if ([caption length]) {
+            pfObject[kCaption] = caption;
+        }
         
         NSData *data= UIImagePNGRepresentation( image );
         

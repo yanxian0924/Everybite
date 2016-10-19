@@ -21,6 +21,7 @@
 #define kImage          @"image"
 #define kObjectId       @"objectId"
 #define kHistogram      @"histogram"
+#define kCaption        @"caption"
 #define kCreatedAt      @"createdAt"
 
 #define kEmail          @"email"
@@ -31,6 +32,6 @@
 + (void)getImagesForMonth:(NSDate *)date block:(void (^)( NSArray *pfObjects ))block;
 + (void)loginWithEmail:(NSString *)email password:(NSString *)password block:(void (^)( NSError *error ))block;
 + (void)signupWithEmail:(NSString *)email password:(NSString *)password block:(void (^)( NSError *error ))block;
-+ (void)uploadImage:(UIImage *)image histogram:(NSMutableArray *)histogram block:(void (^)( PFObject *pfObject ))block;
++ (void)uploadImage:(UIImage *)image histogram:(NSMutableArray *)histogram caption:(NSString *)caption block:(void (^)( PFObject *pfObject ))block;
 
 @end
