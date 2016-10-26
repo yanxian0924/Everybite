@@ -200,45 +200,6 @@
                     }
                 }
                 
-//                
-//                
-//                if (count == [pfObjects count] - 1) {
-//                    if (day == prevDay) {
-//                        
-//                    }
-//                    for (int i=0; i<[his count]; i++) {
-//                        histogram[i] = @( [histogram[i] longValue] + [his[i] longValue] );
-//                    }
-//                    
-//                    UIView *view= views[day];
-//                    ColorBarView *colorBarView= [[ColorBarView alloc] initWithFrame:CGRectMake( 0, view.frame.size.height/2-20/2, view.frame.size.width, 20 ) histogram:histogram];
-//                    colorBarView.tag= day;
-//                    colorBarView.mDate= pfObject.createdAt;
-//                    [view addSubview:colorBarView];
-//                    view.hidden= NO;
-//                        
-//                    [mColorBarViews addObject:colorBarView];
-//                } else if (day != prevDay && count > 0) {
-//                    UIView *view= views[prevDay];
-//                    ColorBarView *colorBarView= [[ColorBarView alloc] initWithFrame:CGRectMake( 0, view.frame.size.height/2-20/2, view.frame.size.width, 20 ) histogram:histogram];
-//                    colorBarView.tag= prevDay;
-//                    colorBarView.mDate= prevDate;
-//                    [view addSubview:colorBarView];
-//                    view.hidden= NO;
-//                        
-//                    [mColorBarViews addObject:colorBarView];
-//                            
-//                    histogram = [[NSMutableArray alloc] init];
-//                    
-//                    for (int i=0; i<[his count]; i++) {
-//                        [histogram addObject:his[i]];
-//                    }
-//                } else {
-//                    for (int i=0; i<[his count]; i++) {
-//                        histogram[i] = @( [histogram[i] longValue] + [his[i] longValue] );
-//                    }
-//                }
-                
                 count++;
                 prevDay = day;
                 prevDate = pfObject.createdAt;
