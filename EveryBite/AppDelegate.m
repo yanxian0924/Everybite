@@ -36,6 +36,12 @@
     
     [Parse setApplicationId:@"MRz149Z0FzbG01OuxhdKJhkdK5KenSXCuJkrh0NR" clientKey:@"FUyp0cs4zAaJDxPw0dbmAaaqsEkAnGwuZAriJv5z"]; // Edison
 
+//    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+//        configuration.applicationId = @"MRz149Z0FzbG01OuxhdKJhkdK5KenSXCuJkrh0NR";
+//        configuration.clientKey = @"FUyp0cs4zAaJDxPw0dbmAaaqsEkAnGwuZAriJv5z";
+//        configuration.server = @"http://parseserver-3uziz-env.us-east-1.elasticbeanstalk.com:1337/parse";
+//    }]];
+    
     self.mGuestUserPassword= kGuestPassword;
 
     // create an ImageCache shared object

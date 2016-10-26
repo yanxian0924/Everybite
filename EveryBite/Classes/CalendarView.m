@@ -130,25 +130,59 @@
         [activityView removeFromSuperview];
         
         if ((pfObjects)&&(pfObjects.count)) {
-            
+            NSInteger prevDay = -1;
+            NSDate *prevDate;
+            int count = 0;
+            NSMutableArray *histogram = [[NSMutableArray alloc] init];
             for (PFObject *pfObject in pfObjects) {
-
                 NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:pfObject.createdAt];
                 NSInteger day= [dateComponents day];
                 
-                UIView *view= views[day];
+                NSArray *his = pfObject[kHistogram];
                 
-                if (view.hidden) {
+                if (count == 0) {
+                    for (int i=0; i<[his count]; i++) {
+                        [histogram addObject:his[i]];
+                    }
+                }
+                
+                if (count == [pfObjects count] - 1) {
+                    for (int i=0; i<[his count]; i++) {
+                        histogram[i] = @( [histogram[i] longValue] + [his[i] longValue] );
+                    }
                     
-                    ColorBarView *colorBarView= [[ColorBarView alloc] initWithFrame:CGRectMake( 0, view.frame.size.height/2-20/2, view.frame.size.width, 20 ) histogram:pfObject[kHistogram]];
+                    UIView *view= views[day];
+                    ColorBarView *colorBarView= [[ColorBarView alloc] initWithFrame:CGRectMake( 0, view.frame.size.height/2-20/2, view.frame.size.width, 20 ) histogram:histogram];
                     colorBarView.tag= day;
                     colorBarView.mDate= pfObject.createdAt;
                     [view addSubview:colorBarView];
                     view.hidden= NO;
-                    
+                        
                     [mColorBarViews addObject:colorBarView];
+                } else if (day != prevDay && count > 0) {
+                    UIView *view= views[prevDay];
+                    ColorBarView *colorBarView= [[ColorBarView alloc] initWithFrame:CGRectMake( 0, view.frame.size.height/2-20/2, view.frame.size.width, 20 ) histogram:histogram];
+                    colorBarView.tag= prevDay;
+                    colorBarView.mDate= prevDate;
+                    [view addSubview:colorBarView];
+                    view.hidden= NO;
+                        
+                    [mColorBarViews addObject:colorBarView];
+                            
+                    histogram = [[NSMutableArray alloc] init];
                     
+                    for (int i=0; i<[his count]; i++) {
+                        [histogram addObject:his[i]];
+                    }
+                } else {
+                    for (int i=0; i<[his count]; i++) {
+                        histogram[i] = @( [histogram[i] longValue] + [his[i] longValue] );
+                    }
                 }
+                
+                count++;
+                prevDay = day;
+                prevDate = pfObject.createdAt;
             }
         }
     }];
