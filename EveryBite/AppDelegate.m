@@ -34,13 +34,13 @@
 {
 //    [Parse setApplicationId:@"Qe3iCWbdAd0ShHIQOyVDdCIz4rmldHTxaFxhfv3V" clientKey:@"OkGhEpgZCutfQg6LWt9Yu0NXbnHl6AZcWvuNPdys"];  // Russell
     
-    [Parse setApplicationId:@"MRz149Z0FzbG01OuxhdKJhkdK5KenSXCuJkrh0NR" clientKey:@"FUyp0cs4zAaJDxPw0dbmAaaqsEkAnGwuZAriJv5z"]; // Edison
+//    [Parse setApplicationId:@"MRz149Z0FzbG01OuxhdKJhkdK5KenSXCuJkrh0NR" clientKey:@"FUyp0cs4zAaJDxPw0dbmAaaqsEkAnGwuZAriJv5z"]; // Edison
 
-//    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
-//        configuration.applicationId = @"MRz149Z0FzbG01OuxhdKJhkdK5KenSXCuJkrh0NR";
-//        configuration.clientKey = @"FUyp0cs4zAaJDxPw0dbmAaaqsEkAnGwuZAriJv5z";
-//        configuration.server = @"http://parseserver-3uziz-env.us-east-1.elasticbeanstalk.com:1337/parse";
-//    }]];
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"MRz149Z0FzbG01OuxhdKJhkdK5KenSXCuJkrh0NR";
+        configuration.clientKey = @"FUyp0cs4zAaJDxPw0dbmAaaqsEkAnGwuZAriJv5z";
+        configuration.server = @"http://parseserver-3uziz-env.us-east-1.elasticbeanstalk.com:1337/parse";
+    }]];
     
     self.mGuestUserPassword= kGuestPassword;
 
