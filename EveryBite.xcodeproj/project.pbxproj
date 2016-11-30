@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		297CEDFFE896994FA506A0D2 /* libPods-EveryBite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4F3EE51EDD9031FA91184F /* libPods-EveryBite.a */; };
 		5ECAA52A1BBADEA90049C633 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA5291BBADEA90049C633 /* main.m */; };
 		5ECAA52D1BBADEA90049C633 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA52C1BBADEA90049C633 /* AppDelegate.m */; };
 		5ECAA5331BBADEA90049C633 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ECAA5311BBADEA90049C633 /* Main.storyboard */; };
@@ -31,12 +32,10 @@
 		5ECAA5771BBAE2D90049C633 /* DayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA56C1BBAE2D90049C633 /* DayView.m */; };
 		5ECAA5781BBAE2D90049C633 /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA56E1BBAE2D90049C633 /* MonthView.m */; };
 		5ECAA5821BBAE2F40049C633 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA57A1BBAE2F40049C633 /* ImageCache.m */; };
-		5ECAA5831BBAE2F40049C633 /* ParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA57C1BBAE2F40049C633 /* ParseManager.m */; };
+		5ECAA5831BBAE2F40049C633 /* MyParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA57C1BBAE2F40049C633 /* MyParseManager.m */; };
 		5ECAA5841BBAE2F40049C633 /* UIColor+ClientColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA57E1BBAE2F40049C633 /* UIColor+ClientColor.m */; };
 		5ECAA5851BBAE2F40049C633 /* UIFont+ClientFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA5801BBAE2F40049C633 /* UIFont+ClientFont.m */; };
 		5ECAA5871BBAE3610049C633 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECAA5861BBAE3610049C633 /* UIImage+ImageEffects.m */; };
-		5ECAA5891BBAE5260049C633 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECAA5881BBAE5260049C633 /* Bolts.framework */; };
-		5ECAA58B1BBAE5330049C633 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECAA58A1BBAE5330049C633 /* Parse.framework */; };
 		5ECAA59B1BBAE5A90049C633 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECAA58C1BBAE5A90049C633 /* Accounts.framework */; };
 		5ECAA59C1BBAE5A90049C633 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECAA58D1BBAE5A90049C633 /* AddressBook.framework */; };
 		5ECAA59D1BBAE5A90049C633 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ECAA58E1BBAE5A90049C633 /* AssetsLibrary.framework */; };
@@ -62,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59679CB7D98575E37E5F9D89 /* Pods-EveryBite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryBite.release.xcconfig"; path = "Pods/Target Support Files/Pods-EveryBite/Pods-EveryBite.release.xcconfig"; sourceTree = "<group>"; };
 		5ECAA5251BBADEA90049C633 /* EveryBite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryBite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECAA5291BBADEA90049C633 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5ECAA52B1BBADEA90049C633 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,16 +108,14 @@
 		5ECAA56E1BBAE2D90049C633 /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MonthView.m; path = Classes/MonthView.m; sourceTree = "<group>"; };
 		5ECAA5791BBAE2F40049C633 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCache.h; path = Classes/ImageCache.h; sourceTree = "<group>"; };
 		5ECAA57A1BBAE2F40049C633 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCache.m; path = Classes/ImageCache.m; sourceTree = "<group>"; };
-		5ECAA57B1BBAE2F40049C633 /* ParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseManager.h; path = Classes/ParseManager.h; sourceTree = "<group>"; };
-		5ECAA57C1BBAE2F40049C633 /* ParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseManager.m; path = Classes/ParseManager.m; sourceTree = "<group>"; };
+		5ECAA57B1BBAE2F40049C633 /* MyParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyParseManager.h; path = Classes/MyParseManager.h; sourceTree = "<group>"; };
+		5ECAA57C1BBAE2F40049C633 /* MyParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyParseManager.m; path = Classes/MyParseManager.m; sourceTree = "<group>"; };
 		5ECAA57D1BBAE2F40049C633 /* UIColor+ClientColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ClientColor.h"; path = "Classes/UIColor+ClientColor.h"; sourceTree = "<group>"; };
 		5ECAA57E1BBAE2F40049C633 /* UIColor+ClientColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ClientColor.m"; path = "Classes/UIColor+ClientColor.m"; sourceTree = "<group>"; };
 		5ECAA57F1BBAE2F40049C633 /* UIFont+ClientFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+ClientFont.h"; path = "Classes/UIFont+ClientFont.h"; sourceTree = "<group>"; };
 		5ECAA5801BBAE2F40049C633 /* UIFont+ClientFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+ClientFont.m"; path = "Classes/UIFont+ClientFont.m"; sourceTree = "<group>"; };
 		5ECAA5811BBAE2F40049C633 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Classes/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		5ECAA5861BBAE3610049C633 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Classes/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		5ECAA5881BBAE5260049C633 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library/Bolts.framework"; sourceTree = "<group>"; };
-		5ECAA58A1BBAE5330049C633 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library/Parse.framework"; sourceTree = "<group>"; };
 		5ECAA58C1BBAE5A90049C633 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		5ECAA58D1BBAE5A90049C633 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		5ECAA58E1BBAE5A90049C633 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -139,9 +137,11 @@
 		5ECAA5B11BBAE8720049C633 /* chevronLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chevronLeft.png; path = EveryBite/Resources/chevronLeft.png; sourceTree = "<group>"; };
 		5ECAA5B21BBAE8720049C633 /* produce-pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "produce-pie.png"; path = "EveryBite/Resources/produce-pie.png"; sourceTree = "<group>"; };
 		5ECAA5B31BBAE8720049C633 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = EveryBite/Resources/user.png; sourceTree = "<group>"; };
+		AF4F3EE51EDD9031FA91184F /* libPods-EveryBite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EveryBite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B68C345C1DA5D4C8002AF64B /* EveryBite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EveryBite.entitlements; sourceTree = "<group>"; };
 		B68CD64E1DADC0E400A87C6F /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
 		B68CD64F1DADC0E400A87C6F /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
+		BFD67B3974A2482D39B7E724 /* Pods-EveryBite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EveryBite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EveryBite/Pods-EveryBite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +166,7 @@
 				5ECAA5A71BBAE5A90049C633 /* Social.framework in Frameworks */,
 				5ECAA5A81BBAE5A90049C633 /* SystemConfiguration.framework in Frameworks */,
 				5ECAA5A91BBAE5A90049C633 /* UIKit.framework in Frameworks */,
-				5ECAA58B1BBAE5330049C633 /* Parse.framework in Frameworks */,
-				5ECAA5891BBAE5260049C633 /* Bolts.framework in Frameworks */,
+				297CEDFFE896994FA506A0D2 /* libPods-EveryBite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +180,7 @@
 				5ECAA5AF1BBAE8160049C633 /* Resources */,
 				5ECAA5AE1BBAE6130049C633 /* Frameworks */,
 				5ECAA5261BBADEA90049C633 /* Products */,
+				A40196D10678F8CADB798E24 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,8 +281,8 @@
 			children = (
 				5ECAA5791BBAE2F40049C633 /* ImageCache.h */,
 				5ECAA57A1BBAE2F40049C633 /* ImageCache.m */,
-				5ECAA57B1BBAE2F40049C633 /* ParseManager.h */,
-				5ECAA57C1BBAE2F40049C633 /* ParseManager.m */,
+				5ECAA57B1BBAE2F40049C633 /* MyParseManager.h */,
+				5ECAA57C1BBAE2F40049C633 /* MyParseManager.m */,
 				5ECAA57D1BBAE2F40049C633 /* UIColor+ClientColor.h */,
 				5ECAA57E1BBAE2F40049C633 /* UIColor+ClientColor.m */,
 				5ECAA57F1BBAE2F40049C633 /* UIFont+ClientFont.h */,
@@ -315,8 +315,7 @@
 				5ECAA5981BBAE5A90049C633 /* Social.framework */,
 				5ECAA5991BBAE5A90049C633 /* SystemConfiguration.framework */,
 				5ECAA59A1BBAE5A90049C633 /* UIKit.framework */,
-				5ECAA58A1BBAE5330049C633 /* Parse.framework */,
-				5ECAA5881BBAE5260049C633 /* Bolts.framework */,
+				AF4F3EE51EDD9031FA91184F /* libPods-EveryBite.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -332,6 +331,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		A40196D10678F8CADB798E24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFD67B3974A2482D39B7E724 /* Pods-EveryBite.debug.xcconfig */,
+				59679CB7D98575E37E5F9D89 /* Pods-EveryBite.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,9 +347,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ECAA53C1BBADEA90049C633 /* Build configuration list for PBXNativeTarget "EveryBite" */;
 			buildPhases = (
+				1C2EB4F343760733F1E7B46E /* [CP] Check Pods Manifest.lock */,
 				5ECAA5211BBADEA90049C633 /* Sources */,
 				5ECAA5221BBADEA90049C633 /* Frameworks */,
 				5ECAA5231BBADEA90049C633 /* Resources */,
+				B62B5AB21C4BA18DE2D59AAC /* [CP] Embed Pods Frameworks */,
+				5BC30E98114AA29C72BFE7D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,7 +369,7 @@
 		5ECAA51D1BBADEA90049C633 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Russell Research Corporation";
 				TargetAttributes = {
 					5ECAA5241BBADEA90049C633 = {
@@ -408,6 +419,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C2EB4F343760733F1E7B46E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5BC30E98114AA29C72BFE7D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EveryBite/Pods-EveryBite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B62B5AB21C4BA18DE2D59AAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EveryBite/Pods-EveryBite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5ECAA5211BBADEA90049C633 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -422,7 +481,7 @@
 				5ECAA5871BBAE3610049C633 /* UIImage+ImageEffects.m in Sources */,
 				B68CD6501DADC0E400A87C6F /* UIImage+Util.m in Sources */,
 				5ECAA5571BBAE2B40049C633 /* RootViewController.m in Sources */,
-				5ECAA5831BBAE2F40049C633 /* ParseManager.m in Sources */,
+				5ECAA5831BBAE2F40049C633 /* MyParseManager.m in Sources */,
 				5ECAA5591BBAE2B40049C633 /* StillViewController.m in Sources */,
 				5ECAA5751BBAE2D90049C633 /* ColorWheelView.m in Sources */,
 				5ECAA5741BBAE2D90049C633 /* ColorBarView.m in Sources */,
@@ -477,8 +536,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -520,8 +581,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -546,6 +609,7 @@
 		};
 		5ECAA53D1BBADEA90049C633 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFD67B3974A2482D39B7E724 /* Pods-EveryBite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EveryBite/EveryBite.entitlements;
@@ -563,12 +627,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.russell-research.EveryBite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos10.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		5ECAA53E1BBADEA90049C633 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59679CB7D98575E37E5F9D89 /* Pods-EveryBite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = EveryBite/EveryBite.entitlements;
@@ -586,7 +651,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.russell-research.EveryBite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos10.0;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

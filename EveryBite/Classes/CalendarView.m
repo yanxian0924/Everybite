@@ -2,14 +2,11 @@
 //  CalendarView.m
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/24/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import "CalendarView.h"
 #import "ActivityView.h"
-#import "ParseManager.h"
+#import "MyParseManager.h"
 #import "ColorBarView.h"
 #import "UIFont+ClientFont.h"
 #import "UIColor+ClientColor.h"
@@ -125,7 +122,7 @@
     ActivityView *activityView= [[ActivityView alloc] initWithFrame:self.bounds centerY:frame.size.height/2];
     [self addSubview:activityView];
     
-    [ParseManager getImagesForMonth:date block:^( NSArray *pfObjects ) {
+    [MyParseManager getImagesForMonth:date block:^( NSArray *pfObjects ) {
         
         [activityView removeFromSuperview];
         
@@ -143,6 +140,16 @@
                 if (count == 0) {
                     for (int i=0; i<[his count]; i++) {
                         [histogram addObject:his[i]];
+                    }
+                    
+                    if (count == [pfObjects count] - 1) {
+                        UIView *view= views[day];
+                        ColorBarView *colorBarView= [[ColorBarView alloc] initWithFrame:CGRectMake( 0, view.frame.size.height/2-20/2, view.frame.size.width, 20 ) histogram:histogram];
+                        colorBarView.tag= day;
+                        colorBarView.mDate= pfObject.createdAt;
+                        [view addSubview:colorBarView];
+                        view.hidden= NO;
+                        [mColorBarViews addObject:colorBarView];
                     }
                 } else if (count > 0 && count < [pfObjects count] - 1) {
                     if (day != prevDay) {

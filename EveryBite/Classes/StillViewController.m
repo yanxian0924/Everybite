@@ -2,13 +2,10 @@
 //  StillViewController.m
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/11/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import "CMMaskView.h"
-#import "ParseManager.h"
+#import "MyParseManager.h"
 #import "ActivityView.h"
 #import "CMHistogramView.h"
 #import "UIFont+ClientFont.h"
@@ -218,7 +215,7 @@
         caption = mCaptionTextField.text;
     }
     
-    [ParseManager uploadImage:image histogram:histogram caption:caption block:^( PFObject *pfObject ) {
+    [MyParseManager uploadImage:image histogram:histogram caption:caption block:^( PFObject *pfObject ) {
         
         [activityView removeFromSuperview];
         

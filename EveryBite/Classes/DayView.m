@@ -2,16 +2,13 @@
 //  DayView.m
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/13/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import "DayView.h"
 #import "AppDelegate.h"
 #import "DayTableView.h"
 #import "ActivityView.h"
-#import "ParseManager.h"
+#import "MyParseManager.h"
 #import "DataViewController.h"
 
 @interface DayView () <UIScrollViewDelegate> {

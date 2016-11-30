@@ -2,14 +2,11 @@
 //  LoginViewController.m
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/11/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import "AppDelegate.h"
 #import "ActivityView.h"
-#import "ParseManager.h"
+#import "MyParseManager.h"
 #import "UIFont+ClientFont.h"
 #import "LiveViewController.h"
 #import "RootViewController.h"
@@ -79,7 +76,7 @@
         ActivityView *activityView= [[ActivityView alloc] initWithFrame:self.view.bounds centerY:mActivityCenterY];
         [self.view addSubview:activityView];
         
-        [ParseManager loginWithEmail:email password:password block:^( NSError *error ) {
+        [MyParseManager loginWithEmail:email password:password block:^( NSError *error ) {
             
             if ([PFUser currentUser]) {
                 
@@ -129,7 +126,7 @@
 
     [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     
-    [ParseManager loginWithEmail:[AppDelegate sharedInstance].mGuestUserEmail password:[AppDelegate sharedInstance].mGuestUserPassword block:^( NSError *error ) {
+    [MyParseManager loginWithEmail:[AppDelegate sharedInstance].mGuestUserEmail password:[AppDelegate sharedInstance].mGuestUserPassword block:^( NSError *error ) {
 
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
@@ -142,7 +139,7 @@
             
         } else {
             
-            [ParseManager signupWithEmail:[AppDelegate sharedInstance].mGuestUserEmail password:[AppDelegate sharedInstance].mGuestUserPassword block:^( NSError *error ) {
+            [MyParseManager signupWithEmail:[AppDelegate sharedInstance].mGuestUserEmail password:[AppDelegate sharedInstance].mGuestUserPassword block:^( NSError *error ) {
                 
                 [activityView removeFromSuperview];
 

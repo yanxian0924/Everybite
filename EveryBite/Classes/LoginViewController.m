@@ -2,13 +2,10 @@
 //  LoginViewController.m
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/21/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import "ActivityView.h"
-#import "ParseManager.h"
+#import "MyParseManager.h"
 #import "UIFont+ClientFont.h"
 #import "LiveViewController.h"
 #import "UIColor+ClientColor.h"
@@ -183,7 +180,7 @@
     ActivityView *activityView= [[ActivityView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:activityView];
     
-    [ParseManager loginWithEmail:[mEmailTextField.text lowercaseString] password:mPasswordTextField.text block:^( NSError *error ) {
+    [MyParseManager loginWithEmail:[mEmailTextField.text lowercaseString] password:mPasswordTextField.text block:^( NSError *error ) {
         
         [activityView removeFromSuperview];
         

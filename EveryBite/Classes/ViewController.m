@@ -2,9 +2,6 @@
 //  ViewController.m
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/10/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import "ViewController.h"

@@ -2,9 +2,6 @@
 //  AppDelegate.m
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/10/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import <Parse/Parse.h>
@@ -39,7 +36,7 @@
     [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         configuration.applicationId = @"MRz149Z0FzbG01OuxhdKJhkdK5KenSXCuJkrh0NR";
         configuration.clientKey = @"FUyp0cs4zAaJDxPw0dbmAaaqsEkAnGwuZAriJv5z";
-        configuration.server = @"http://parseserver-3uziz-env.us-east-1.elasticbeanstalk.com:1337/parse";
+        configuration.server = @"http://parseserver-3uziz-env.us-east-1.elasticbeanstalk.com/parse";
     }]];
     
     self.mGuestUserPassword= kGuestPassword;

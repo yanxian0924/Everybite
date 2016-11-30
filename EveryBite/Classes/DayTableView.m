@@ -2,14 +2,11 @@
 //  DayTableView.m
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/16/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import "ImageCache.h"
 #import "DayTableView.h"
-#import "ParseManager.h"
+#import "MyParseManager.h"
 #import "ActivityView.h"
 #import "ColorBarView.h"
 #import "UIFont+ClientFont.h"
@@ -59,7 +56,7 @@
     ActivityView *activityView= [[ActivityView alloc] initWithFrame:self.bounds centerY:frame.size.height/2];
     [self addSubview:activityView];
     
-    [ParseManager getImagesForDay:date block:^( NSArray *pfObjects ) {
+    [MyParseManager getImagesForDay:date block:^( NSArray *pfObjects ) {
         
         [activityView removeFromSuperview];
         

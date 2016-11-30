@@ -2,15 +2,12 @@
 //  DataViewController.m
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/11/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import "DayView.h"
 #import "MonthView.h"
 #import "AppDelegate.h"
-#import "ParseManager.h"
+#import "MyParseManager.h"
 #import "CMHistogramView.h"
 #import "UIFont+ClientFont.h"
 #import "DataViewController.h"

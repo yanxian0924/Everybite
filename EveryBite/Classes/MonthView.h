@@ -2,9 +2,6 @@
 //  MonthView.h
 //  EatHue
 //
-//  Created by Russell Mitchell on 1/24/15.
-//  Copyright (c) 2015 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import <UIKit/UIKit.h>

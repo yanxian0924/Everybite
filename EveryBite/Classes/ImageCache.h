@@ -1,9 +1,6 @@
 //
 //  ImageCache.h
 //
-//  Created by Russell on 11/16/12.
-//  Copyright (c) 2012 Russell Research Corporation. All rights reserved.
-//
 //  The ImageCache class provides simple methods for persisting image data
 //  based on the age of the image.
 //

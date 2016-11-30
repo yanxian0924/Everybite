@@ -1,9 +1,6 @@
 //
 //  ImageCache.m
 //
-//  Created by Russell on 11/16/12.
-//  Copyright (c) 2012 Russell Research Corporation. All rights reserved.
-//
 //------------------------------------------------------------------------------
 
 #import "ImageCache.h"
